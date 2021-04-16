@@ -1,4 +1,15 @@
+// ! preload
 @import 'base/variables';
+
+
 * {
    font-family: 'Museo Sans', sans-serif;
 }
+.container {
+   max-width: 950px;
+   margin: 0px auto;
+}
+
+@import 'blocks/promo';
+@import 'blocks/header.scss';
+@import 'blocks/buttons';
