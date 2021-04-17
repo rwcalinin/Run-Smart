@@ -2,6 +2,9 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   @media (max-width: 465px) {
+      flex-direction: column;
+   }
    &__logo {
       width: 250px;
       img {
@@ -13,6 +16,9 @@
       font-weight: 500;
       font-size: 12px;
       text-align: center;
+      @media (max-width: 720px) {
+         display: none;
+      }
       span {
          display: block;
          font-size: 18px;
@@ -33,5 +39,8 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      @media (max-width: 465px) {
+         display: none;
+      }
    }
 }

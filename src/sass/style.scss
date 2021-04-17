@@ -8,10 +8,33 @@
 .container {
    max-width: 950px;
    margin: 0px auto;
+   @media (max-width: 990px) {
+      margin-left: 2%;
+      margin-right: 2%;
+   }
+}
+
+.title {
+   text-transform: uppercase;
+   font-size: 30px;
+   font-weight: 700;
+   color: #0d0d0d;
+   text-align: center;
+   padding-top: 69px;
+   text-transform: uppercase;
+   &--left {
+      color: #fff;
+      font-size: 36px;
+      text-align: left;
+      line-height: 40px;
+
+   }
 }
 
 @import 'blocks/promo';
 @import 'blocks/header.scss';
 @import 'blocks/buttons';
 @import 'blocks/advantages';
-
+@import 'blocks/consultation';
+@import 'blocks/forms';
+@import 'blocks/carousel';

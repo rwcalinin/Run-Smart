@@ -1,0 +1,19 @@
+.consultation {
+   min-height: 680px;
+   padding: 100px 0 92px 0;
+   background: url(../../img/background/form__bg.jpg) center (center/cover) no-repeat;
+   @media (max-width: 768px) {
+      text-align: center;
+   }
+   &__desc {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+   }
+}
+.title--left {
+   @media (max-width: 768px) {
+      text-align: center;
+   }
+}
