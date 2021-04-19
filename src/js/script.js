@@ -36,4 +36,36 @@ $(document).ready(function () {
       })
    });
 
+
+   function valideForms(form){
+      $(form).validate({
+         rules: {
+            name: {
+               required: true,
+               minlength: 2
+            },
+            phone: "required",
+            email: {
+               required: true,
+               email: true
+            }
+         },
+            messages: {
+               name: {
+                  required: "Пожалуйста, введите своё имя",
+                  minlength: jQuery.validator.format("Имя должно состоять минимум из {0} символов")
+               },
+               phone: "Пожалуйста, введите свой номер телефона",
+               email: {
+                  required: "Пожалуйста, введите адрес E-Mail",
+                  email: "Почта должна быть правильного формата"
+               }
+            }
+      });
+   }
+   
+   valideForms('#consultation-form');
+   valideForms('#consultation form');
+   valideForms('#order form');
+
 });
