@@ -36,6 +36,7 @@ $(document).ready(function () {
       })
    });
 
+   // php form
 
    function valideForms(form){
       $(form).validate({
@@ -67,5 +68,36 @@ $(document).ready(function () {
    valideForms('#consultation-form');
    valideForms('#consultation form');
    valideForms('#order form');
+
+   $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+         type: "POST",
+         url: "mailer/smart.php",
+         data: $(this).serialize()
+      }).done(function() {
+         $(this).find("input").val("");
+
+
+         $('form').trigger('reset');
+      });
+      return false;
+   });
+
+   // Smooth scroll
+
+   $(window).scroll(function() {
+      if ($(this).scrollTop() > 900) {
+         $('.pageup').fadeIn();
+      } else {
+         $('.pageup').fadeOut();
+      }
+   });
+
+   $("a[href='#up']").click(function(){
+      const _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+      return false;
+});
 
 });
